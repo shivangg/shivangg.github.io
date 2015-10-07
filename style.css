@@ -1,0 +1,115 @@
+#footer{
+  font: small;
+  text-align: center;
+  margin: 5px 70px 0px 250px;
+  background-color:#af7747;
+  clear:both;
+  }
+#dp{
+  float:left;
+}
+
+div{
+  border-radius:20px;
+}
+.content{
+  opacity: 0.6;
+}
+.focus h1{
+  color:000000;
+}
+#tabs{
+  width:350px;
+  float:left;
+  padding: 10px;
+  margin: 30px 0px 5px 0px;
+  background-color:#af7747;
+  
+ }
+@keyframes colorChange {
+    from {;}
+    to {background-color: #33240d;}
+}
+#a{
+    animation-name: colorChange;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  
+}
+#b{
+    animation-name: colorChange;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+#c{
+    animation-name: colorChange;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+   animation-delay: 4s;
+}
+
+
+
+
+#tabs a:link{
+  font-family:'Oswald' san-serif;
+  color:#ffffff;
+}
+
+#tabs a:visited{
+  font-family:'Oswald' san-serif;
+  color:#000000;
+}
+#tabs a:hover{
+  font-family:'Oswald' san-serif;
+  color:#ffffff;
+}
+body{
+  background-image:url(images/brownBackground.jpg);;
+  }
+#sidebar{
+  position:fixed;
+  right:0px;
+  top:80px;
+  width:60px;
+  
+ }
+h1,#footer{
+  text-align:center;
+  color:#ffffff;
+}
+#main h1{
+  font-size:60px;
+  color:#000000;
+  padding:0px;
+  margin: 0px;
+}
+p{
+  font-family: cursive;
+  font-size: 25px;
+  text-align:center;
+  color:#ffffff;
+}
+#googlemaps{
+  float: left;
+}
+
+#header{
+  color:#675c47;
+  padding:10px;
+  margin:  0px 5px 0px 5px;
+}
+#main{
+  background-color:#af7747;
+  margin:30px 70px 0px 390px;
+  font-family: 'Oswald' san-seriff;
+  padding: 10px;
+}
+img{
+  padding:0px;
+  border: 2px solid #000000;
+}
