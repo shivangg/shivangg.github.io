@@ -1,50 +1,23 @@
+---
+layout: default
+---
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <title>About Me</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  
-  <body>
-    
-   
-    
-    <div id="sidebar">
-        <a href="https://www.facebook.com/sankalpic"><img src="images/fb.jpg" alt="Connect to me on facebook" title="Connect to my FB profile" /> </a></br>
-        <a href="https://www.github.com/shivangg"><img src="images/github.jpg" alt="Connect to me on Github" title="Connect to my Github profile" /> </a></br>
-        <a href="https://www.linkedin.com/shivangg"><img src="images/linkedIn.jpg" alt="Connect to me on LinkedIn" title="Connect to my LinkedIn profile" /> </a></br>
-        <a href="https://mail.google.com/"><img src="images/gplus.jpg" alt="Connect to me on google+" title="Connect to my Google+ profile" /> </a></br>
-        <a href="https://www.pinterest.com/"><img src="images/pinterest.jpg" alt="Connect to me on pinterest" title="Connect to my Pinterest profile" /> </a></br>
-        <a href="https://www.quora.com/"><img src="images/quora.jpg" alt="Connect to me on Quora" title="Connect to my Quoarageous profile" /> </a></br>
-      </div>
+<div class="home">
 
-   <div id="tabs" class="content">
-     <span class="focus"><h1>ABOUT ME</h1></span>
-     <div id="a"><a href="whyengineering.html"><h1>WHY ENGINEERING</h1></a></div>
-     <div id="b"><a href="myethos.html"><h1>MY ETHOS</h1></a></div>
-     <div id="c"><a href="contactme.html"><h1>CONTACT ME</h1></a></div>
-     
-    </div>
+  <h1 class="page-heading">My Posts</h1>
 
-      
-      <div id="main" class="content">
-        <h1>ABOUT ME</h1>
-        <p><span id="dp"><img src="images/dp.jpg" /></span>  I, Shivang Tripathi, am second year student of Ajay Kumar Garg Engineering College pursuing my Bachelors in Electrical and Electronics engineering. Hailing from the city of Nawabs(Lucknow) , I like learning and exploring into the unknown for anything and everything. I often find myself interested in anything which is even remotely connected to computing systems(Both hardware and software end).<a href=resource/mamaAfrica.mp3>Download this thang!</a>Or this <a href="resource/nasa.apk">apk.</a></p>
- <p>Currently recruited in the prestigious department of AKGEC,ie, <em>Software Incubator</em>, I plan to learn loads of new stuff everyday like <a href="mario/index.html">this mario</a>(still developing) from seniors and peers. 
-</p>
-      </div>
-      
-      
-      
-      <div id="footer" class="content">
-        &copy 2015,portfolio by Shivangg</br>
-      All trademarks appearing are property of their respective owners.
-      <div>
-    </body>
-  </html>
-        
-        
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
