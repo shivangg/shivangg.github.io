@@ -1,20 +1,56 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# user variables, change this to make custom site.
 
-# Site settings
-title: Shivangg's Blog
-email: xshivangx@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Hi, I am Shivangg Tripathi, an electronic tinkerer and enthusiast, studying Electronics and Electrical engineering.
-  My aim for writing this blog is to share what I discovered while learning about electronics and automation in general.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://shivangg.github.com" # the base hostname & protocol for your site
-twitter_username: xshivangx
-github_username:  shivangg
+name: Shivangg's Blog
+desc: My weblog to document the stuff I find interesting or challenging so that they may be useful to the community and me in future.
+author:
+  name: Shivangg
+  #avatar: //gravatar.com/avatar/daa1cc36ed2ab0d13045d5cd2431cde9?s=320
+  profile: |
+    I, Shivang Tripathi, am second year student of Ajay Kumar Garg Engineering College pursuing my Bachelors in Electrical and 
+    Electronics engineering. Hailing from the city of Nawabs(Lucknow) ,
+     I like learning and exploring into the unknown for anything and everything. I often find myself interested in anything which is even 
+     remotely connected to computing systems(Both hardware and software end).
 
-# Build settings
-markdown: kramdown
+    Currently recruited in the prestigious department of AKGEC,ie, <em>Software Incubator</em>, I plan to learn loads of new stuff everyday like [this mario](mario/index.html) (still developing) from seniors and peers. 
+  socials:
+    facebook:
+    twitter: //twitter.com/xshivangx
+    google-plus:
+    github: //github.com/shivangg
+    stack-overflow: //stackoverflow.com/users/6118172/shivx
+    instagram:
+    pinterest:
+    #steam: //steamcommunity.com/id/neizod/
+license: MIT License
+
+
+# theme variables, change this to make site looks best.
+baseurl: /blog
+paginate: 3
+
+
+
+# system variables, do not change unless you knew what's it does.
+gems: [jekyll-paginate]
+paginate_path: page/:num
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+sass:
+  sass_dir: _sass
+  style: compressed

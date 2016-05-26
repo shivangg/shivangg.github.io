@@ -1,39 +1,19 @@
+---
+---
 <!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
+<html lang="en">
+  <head>
+    {% include metadata.html %}
+  </head>
   <body>
-
-    {% include header.html %}
-
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '210369102663336',
-            xfbml      : true,
-            version    : 'v2.5'
-          });
-        };
-      
-        (function(d, s, id){
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) 
-              {return;}
-           js = d.createElement(s); js.id = id;
-           js.src = "//connect.facebook.net/en_US/sdk.js";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div class="container">
+      <div class="row" id="main-row">
+        {% include left.html %}
+        {% include main.html %}
+        {% include right.html %}
+        {% include check_mode.html %}
       </div>
     </div>
-
-    {% include footer.html %}
-
+    {% include scripts.html %}
   </body>
-
 </html>
