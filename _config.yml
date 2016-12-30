@@ -34,7 +34,7 @@ paginate: 3
 gems: [jekyll-paginate]
 paginate_path: page/:num
 
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 
 defaults:
