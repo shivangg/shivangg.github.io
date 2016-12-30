@@ -35,9 +35,7 @@ gems: [jekyll-paginate]
 paginate_path: page/:num
 
 highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables"]
+markdown: kramdown
 
 defaults:
   - scope:
