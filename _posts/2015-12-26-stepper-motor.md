@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Making Stepper Motor work with Polulu A4988 stepper translator"
 ---
 
