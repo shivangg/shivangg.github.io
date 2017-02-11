@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Hi, I am Shivangg Tripathi, an electronic tinkerer and enthusiast, studying Electronics and Electrical engineering. My aim for writing this blog is to share what I discovered while learning about electronics and automation in general.
-">
+  <title>To easily set up ML python libraries</title>
+  <meta name="description" content="Install ML python libraries Pycharm">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://shivangg.github.com/about/">
+  <link rel="canonical" href="http://shivangg.github.com/2017/01/01/pyML-lib.html">
   <link rel="alternate" type="application/rss+xml" title="Shivangg's Blog" href="http://shivangg.github.com/feed.xml">
 </head>
 
@@ -81,19 +80,29 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">To easily set up ML python libraries</h1>
+    <p class="post-meta"><time datetime="2017-01-01T00:00:00+05:30" itemprop="datePublished">Jan 1, 2017</time></p>
   </header>
 
-  <div class="post-content">
-    <p><img src="/images/dp.jpg" alt="my image" /></p>
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="install-ml-python-libraries-pycharm">Install ML python libraries Pycharm</h2>
 
-<p>I, Shivang Tripathi, am second year student of Ajay Kumar Garg Engineering College pursuing my Bachelors in Electrical and Electronics engineering. Hailing from the city of Nawabs(Lucknow) , I like learning and exploring into the unknown for anything and everything. I often find myself interested in anything which is even remotely connected to computing systems(Both hardware and software end)</p>
+<p>After some tinkering, I wasa finally able to pull this through. Maybe this is not the best way but this works for me. Steps : </p>
 
-<p>Currently recruited in the prestigious department of AKGEC,ie, <em>Software Incubator</em>, I plan to learn loads of new stuff everyday like <a href="../mario/index.html">this mario</a>(still developing) from seniors and peers. </p>
+<ul>
+  <li>Install Miniconda 3 using the miniconda3 executible for Windows.</li>
+  <li>Go to File =&gt; Settings =&gt; Project.</li>
+  <li>In the Project Interpreter box, give the path to the <code>python.exe</code> in the folder where miniconda is installed.</li>
+  <li>Then run pip install <em>package</em></li>
+  <li>
+    <p>To run the python program do not use the console. Use the Run (<code>Ctrl+Shift+F10</code>)</p>
 
+    <p>This should work after PyCharm indexes the files after some seconds.</p>
+  </li>
+</ul>
 
   </div>
 

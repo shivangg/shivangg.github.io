@@ -5,6 +5,8 @@ date:   2014-02-12 10:01:48
 categories: jekyll update
 ---
 
+## Journey of starting with Jekyll
+
 So, after making up my mind to start blogging, I was particularly inclined 
 towards **Jekyll**, `a blog-aware static site generator`. Installing it on linux wasnt a problem and had many guides and tutorials to
 getting it installed by

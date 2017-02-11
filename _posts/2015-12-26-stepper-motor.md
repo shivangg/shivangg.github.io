@@ -3,7 +3,7 @@ layout: post
 title: "Making Stepper Motor work with Polulu A4988 stepper translator"
 ---
 
-##First Step
+## The First Step
 Basic step to successful working with stepper lies within the ability to find the correct configuration of the wires coming out of the stepper
 motor.
 
