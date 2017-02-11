@@ -10,7 +10,8 @@ title: Shivangg's Blog
 email: shivangg@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Hi, I am Shivangg Tripathi, an electronic tinkerer and enthusiast, studying Electronics and Electrical engineering.
-  My aim for writing this blog is to share what I discovered while learning about electronics and automation in general.
+  My aim for writing this blog is to share what I discovered while learning about electronics and automation in general. I like learning and exploring into the unknown for anything and everything. I often find myself interested in anything which is even 
+     remotely connected to computing systems(Both hardware and software end).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: xshivangx
@@ -18,4 +19,3 @@ github_username:  shivangg
 
 # Build settings
 markdown: kramdown
-
