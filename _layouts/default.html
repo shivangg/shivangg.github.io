@@ -6,12 +6,11 @@
     {% include metadata.html %}
   </head>
   <body>
-    <div class="container">
-      <div class="row" id="main-row">
-        {% include left.html %}
-        {% include main.html %}
-        {% include right.html %}
-        {% include check_mode.html %}
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
       </div>
     </div>
     {% include scripts.html %}
