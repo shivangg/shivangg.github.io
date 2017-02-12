@@ -18,3 +18,5 @@ github_username:  shivangg
 
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-minimal
