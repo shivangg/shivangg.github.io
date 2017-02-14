@@ -22,7 +22,7 @@ div{
   width:350px;
   float:left;
   padding: 10px;
-  margin: 30px 0px 5px 0px;
+  margin: 30px 0 5px 0;
   background-color:#af7747;
   
  }
@@ -31,10 +31,10 @@ div{
     to {background-color: #33240d;}
 }
 #a{
-    animation-name: colorChange;
     animation-duration: 6s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+    animation-name: colorChange;
   
 }
 #b{

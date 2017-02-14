@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Making Stepper Motor work with Polulu A4988 stepper translator</title>
   <meta name="description" content="The First StepBasic step to successful working with stepper lies within the ability to find the correct configuration of the wires coming out of the stepperm...">
 
+  <link rel='shortcut icon' href="/favicon.ico" />
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://shivangg.github.com/2015/12/26/stepper-motor.html">
-  <link rel="alternate" type="application/rss+xml" title="Shivangg's Blog" href="http://shivangg.github.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/2015/12/26/stepper-motor.html">
+  <link rel="alternate" type="application/rss+xml" title="Shivangg's Blog" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -109,7 +109,7 @@ the battle is half won. Using a microcontroller just pass the series of <strong>
 
 <p>and you can make it move though this is a very bad practice. Its so baecause then the motor will draw a large current from your microcontroller
 thus, <em>damaging</em> it!. If we cannot power the motor from our microconroller, the only option left is external supply. but we can’t just connect
-the external supply-<em>why?</em> because we need to give the power to the motor in a particular fashion as shown in the above snipppet. So, what to do?
+the external supply-_why?_ because we need to give the power to the motor in a particular fashion as shown in the above snipppet. So, what to do?
 <strong>Solution</strong> - Driver IC.</p>
 
 <p>The <em>sole</em> purpose of a driver IC is to transfer current from the external supply to the motor on the command of the microcontroller. So, the microcontroller just tells the driver IC to power the motor according to the programmed code.</p>
@@ -122,7 +122,7 @@ the external supply-<em>why?</em> because we need to give the power to the motor
   <li>Microstepping</li>
 </ol>
 
-<p>To achieve such dedicated stepping modes, we have options of </p>
+<p>To achieve such dedicated stepping modes, we have options of</p>
 
 <ol>
   <li>Coding them on our own or finding suitable library to do our work.</li>
@@ -134,15 +134,15 @@ stepping mode yourself; just pass the information to the translator about which 
 
 <p><img src="/images/polulua4988.jpg" alt="Polulu A4988" /></p>
 
-<p>You can use it by </p>
+<p>You can use it by</p>
 
 <ol>
   <li>Connecting the correct stepping motor wires(the config of which you know now!) to the 1A/B and 2A/B.</li>
-  <li><code>Vdd</code> to 5V microcontroller supply and <code>Vmot</code> to external supply(respective <em>Gnd</em> too).</li>
-  <li>Short <code>SLEEP</code> and <code>RESET</code> to make this easier to work and keep <code>ENABLE</code> logic low to keep it functional.</li>
-  <li><code>DIRECTION</code> is the key to way to rotate the motor is opposite directions for <code>HIGH</code> and <code>LOW</code> logic values.</li>
-  <li>Select <code>MS1</code>,<code>MS2</code> and <code>MS3</code> to select the corect stepping mode. Keep all <code>LOW</code> for one phse stepping.</li>
-  <li><code>STEP</code>-give a pulse of reasonable duration to this pin to the motor move. Single pulse makes it move by single step.</li>
+  <li><code class="highlighter-rouge">Vdd</code> to 5V microcontroller supply and <code class="highlighter-rouge">Vmot</code> to external supply(respective <em>Gnd</em> too).</li>
+  <li>Short <code class="highlighter-rouge">SLEEP</code> and <code class="highlighter-rouge">RESET</code> to make this easier to work and keep <code class="highlighter-rouge">ENABLE</code> logic low to keep it functional.</li>
+  <li><code class="highlighter-rouge">DIRECTION</code> is the key to way to rotate the motor is opposite directions for <code class="highlighter-rouge">HIGH</code> and <code class="highlighter-rouge">LOW</code> logic values.</li>
+  <li>Select <code class="highlighter-rouge">MS1</code>,<code class="highlighter-rouge">MS2</code> and <code class="highlighter-rouge">MS3</code> to select the corect stepping mode. Keep all <code class="highlighter-rouge">LOW</code> for one phse stepping.</li>
+  <li><code class="highlighter-rouge">STEP</code>-give a pulse of reasonable duration to this pin to the motor move. Single pulse makes it move by single step.</li>
 </ol>
 
 
