@@ -1,0 +1,182 @@
+body{
+    color: #f5f6f7;
+    font: 20px "Montserrat", sans-serif;
+    line-height: 1.8;
+}
+
+p{
+	font-size: 16px;
+}
+
+@media only screen and (min-width: 768px){
+ 	.intro, .what{
+	padding-left: 20%;
+	padding-right: 20%;
+	}
+}
+
+.margin {
+	margin-bottom: 45px;
+}
+
+.navbar {
+    background-color: #1abc9c;
+    border: 0;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px ;
+    letter-spacing: 4px;
+    line-height: 1.42857143 ;
+    margin-bottom: 0;
+    z-index: 9999;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    background-color: #fff !important;
+    color: #1abc9c !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.img-responsive{
+	display: inline;
+	width: 100%;
+}
+
+
+.img-circle{
+
+	/*To make the high resolution dp responsive. */
+
+	    max-width: 25%;
+    	min-width: 130px;
+}
+
+.container-fluid{
+	padding-bottom: 70px;
+	padding-top: 70px;
+	width: 100%;
+
+}
+
+.btn{
+	padding-top: 10px;
+}
+
+.bg-1{
+	background-color: #1abc9c;
+	color: #FFFFFF;
+}
+
+.bg-2{
+	background-color: #474e5d;
+	color: #FFFFFF;
+}
+
+.bg-3{
+	background-color: #ffffff;
+	color: #555555;
+}
+
+.bg-4{
+	background-color: #2f2f2f;
+	color: #ffffff;
+}
+
+.social{
+	width: 50px
+	background-color: white;
+}
+
+svg path {
+	fill: white;
+}
+
+.social a:hover{
+	transform: scale(1.25);
+	/*background-color: white;*/
+  	/*transition: background-color .5s, transform .5s ease-out*/
+}
+
+
+.mail a:hover svg path, .linkedin a:hover svg path, .facebook a:hover svg path, .youtube a:hover svg path{
+	fill: #fff;
+}
+
+.github a:hover svg path{
+	fill: #000;
+}
+
+.github svg:hover{
+	background: #fff;
+}
+
+.youtube svg:hover{
+	background: #e62117;
+}
+
+.facebook svg:hover{
+	background: #3b5998;
+}
+
+.linkedin svg:hover{
+	background: #0077b5;
+}
+
+
+.mail svg:hover{
+	background-color: #db4437;
+}
+
+.stackoverflow a:hover svg path{
+	fill: #f48024;
+}
+
+.stackoverflow svg:hover{
+	background: #fff;
+}
+
+
+.slideanim {
+	visibility:hidden;
+}
+
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}

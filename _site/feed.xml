@@ -4,33 +4,33 @@
     <title>Shivangg's Blog</title>
     <description>Hi, I am Shivangg Tripathi, an electronic tinkerer and enthusiast, studying Electronics and Electrical engineering. My aim for writing this blog is to share what I discovered while learning about electronics and automation in general.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Feb 2017 01:28:27 +0530</pubDate>
-    <lastBuildDate>Tue, 14 Feb 2017 01:28:27 +0530</lastBuildDate>
-    <generator>Jekyll v3.4.0</generator>
+    <link>http://shivangg.github.io/</link>
+    <atom:link href="http://shivangg.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 19 Feb 2017 04:32:48 +0530</pubDate>
+    <lastBuildDate>Sun, 19 Feb 2017 04:32:48 +0530</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>To easily set up ML python libraries</title>
         <description>&lt;h2 id=&quot;install-ml-python-libraries-pycharm&quot;&gt;Install ML python libraries Pycharm&lt;/h2&gt;
 
-&lt;p&gt;After some tinkering, I wasa finally able to pull this through. Maybe this is not the best way but this works for me. Steps :&lt;/p&gt;
+&lt;p&gt;After some tinkering, I wasa finally able to pull this through. Maybe this is not the best way but this works for me. Steps : &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Install Miniconda 3 using the miniconda3 executible for Windows.&lt;/li&gt;
   &lt;li&gt;Go to File =&amp;gt; Settings =&amp;gt; Project.&lt;/li&gt;
-  &lt;li&gt;In the Project Interpreter box, give the path to the &lt;code class=&quot;highlighter-rouge&quot;&gt;python.exe&lt;/code&gt; in the folder where miniconda is installed.&lt;/li&gt;
+  &lt;li&gt;In the Project Interpreter box, give the path to the &lt;code&gt;python.exe&lt;/code&gt; in the folder where miniconda is installed.&lt;/li&gt;
   &lt;li&gt;Then run pip install &lt;em&gt;package&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;To run the python program do not use the console. Use the Run (&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+Shift+F10&lt;/code&gt;)&lt;/p&gt;
+    &lt;p&gt;To run the python program do not use the console. Use the Run (&lt;code&gt;Ctrl+Shift+F10&lt;/code&gt;)&lt;/p&gt;
 
     &lt;p&gt;This should work after PyCharm indexes the files after some seconds.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2017/01/01/pyML-lib.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/01/01/pyML-lib.html</guid>
+        <link>http://shivangg.github.io/2017/01/01/pyML-lib.html</link>
+        <guid isPermaLink="true">http://shivangg.github.io/2017/01/01/pyML-lib.html</guid>
         
         
       </item>
@@ -58,7 +58,7 @@ the battle is half won. Using a microcontroller just pass the series of &lt;stro
 
 &lt;p&gt;and you can make it move though this is a very bad practice. Its so baecause then the motor will draw a large current from your microcontroller
 thus, &lt;em&gt;damaging&lt;/em&gt; it!. If we cannot power the motor from our microconroller, the only option left is external supply. but we can’t just connect
-the external supply-_why?_ because we need to give the power to the motor in a particular fashion as shown in the above snipppet. So, what to do?
+the external supply-&lt;em&gt;why?&lt;/em&gt; because we need to give the power to the motor in a particular fashion as shown in the above snipppet. So, what to do?
 &lt;strong&gt;Solution&lt;/strong&gt; - Driver IC.&lt;/p&gt;
 
 &lt;p&gt;The &lt;em&gt;sole&lt;/em&gt; purpose of a driver IC is to transfer current from the external supply to the motor on the command of the microcontroller. So, the microcontroller just tells the driver IC to power the motor according to the programmed code.&lt;/p&gt;
@@ -71,7 +71,7 @@ the external supply-_why?_ because we need to give the power to the motor in a p
   &lt;li&gt;Microstepping&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;To achieve such dedicated stepping modes, we have options of&lt;/p&gt;
+&lt;p&gt;To achieve such dedicated stepping modes, we have options of &lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Coding them on our own or finding suitable library to do our work.&lt;/li&gt;
@@ -83,28 +83,28 @@ stepping mode yourself; just pass the information to the translator about which 
 
 &lt;p&gt;&lt;img src=&quot;/images/polulua4988.jpg&quot; alt=&quot;Polulu A4988&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;You can use it by&lt;/p&gt;
+&lt;p&gt;You can use it by &lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Connecting the correct stepping motor wires(the config of which you know now!) to the 1A/B and 2A/B.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Vdd&lt;/code&gt; to 5V microcontroller supply and &lt;code class=&quot;highlighter-rouge&quot;&gt;Vmot&lt;/code&gt; to external supply(respective &lt;em&gt;Gnd&lt;/em&gt; too).&lt;/li&gt;
-  &lt;li&gt;Short &lt;code class=&quot;highlighter-rouge&quot;&gt;SLEEP&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;RESET&lt;/code&gt; to make this easier to work and keep &lt;code class=&quot;highlighter-rouge&quot;&gt;ENABLE&lt;/code&gt; logic low to keep it functional.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DIRECTION&lt;/code&gt; is the key to way to rotate the motor is opposite directions for &lt;code class=&quot;highlighter-rouge&quot;&gt;HIGH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;LOW&lt;/code&gt; logic values.&lt;/li&gt;
-  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;MS1&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;MS2&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;MS3&lt;/code&gt; to select the corect stepping mode. Keep all &lt;code class=&quot;highlighter-rouge&quot;&gt;LOW&lt;/code&gt; for one phse stepping.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;STEP&lt;/code&gt;-give a pulse of reasonable duration to this pin to the motor move. Single pulse makes it move by single step.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Vdd&lt;/code&gt; to 5V microcontroller supply and &lt;code&gt;Vmot&lt;/code&gt; to external supply(respective &lt;em&gt;Gnd&lt;/em&gt; too).&lt;/li&gt;
+  &lt;li&gt;Short &lt;code&gt;SLEEP&lt;/code&gt; and &lt;code&gt;RESET&lt;/code&gt; to make this easier to work and keep &lt;code&gt;ENABLE&lt;/code&gt; logic low to keep it functional.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;DIRECTION&lt;/code&gt; is the key to way to rotate the motor is opposite directions for &lt;code&gt;HIGH&lt;/code&gt; and &lt;code&gt;LOW&lt;/code&gt; logic values.&lt;/li&gt;
+  &lt;li&gt;Select &lt;code&gt;MS1&lt;/code&gt;,&lt;code&gt;MS2&lt;/code&gt; and &lt;code&gt;MS3&lt;/code&gt; to select the corect stepping mode. Keep all &lt;code&gt;LOW&lt;/code&gt; for one phse stepping.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;STEP&lt;/code&gt;-give a pulse of reasonable duration to this pin to the motor move. Single pulse makes it move by single step.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
         <pubDate>Sat, 26 Dec 2015 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2015/12/26/stepper-motor.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/12/26/stepper-motor.html</guid>
+        <link>http://shivangg.github.io/2015/12/26/stepper-motor.html</link>
+        <guid isPermaLink="true">http://shivangg.github.io/2015/12/26/stepper-motor.html</guid>
         
         
       </item>
     
       <item>
         <title>My Ethos</title>
-        <description>&lt;p&gt;##ETHOS&lt;/p&gt;
+        <description>&lt;h2 id=&quot;ethos&quot;&gt;ETHOS&lt;/h2&gt;
 
 &lt;p&gt;Learn by doing things. &lt;strong&gt;True learning&lt;/strong&gt; can never be achieved in the captivation of the four walls of a classroom. Classroom teaching provides no hurdles to the learning process. Without any obstruction, there is no significant excitation of the parts of brain responsible for learning. Thus the student gets a false sense of learning. True learning can be achieved only by doing or making a product pertaining  to the concepts you are learning.&lt;/p&gt;
 
@@ -112,8 +112,8 @@ stepping mode yourself; just pass the information to the translator about which 
 
 </description>
         <pubDate>Sun, 12 Apr 2015 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2015/04/12/my-ethos.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/04/12/my-ethos.html</guid>
+        <link>http://shivangg.github.io/2015/04/12/my-ethos.html</link>
+        <guid isPermaLink="true">http://shivangg.github.io/2015/04/12/my-ethos.html</guid>
         
         
       </item>
@@ -123,38 +123,38 @@ stepping mode yourself; just pass the information to the translator about which 
         <description>&lt;h2 id=&quot;journey-of-starting-with-jekyll&quot;&gt;Journey of starting with Jekyll&lt;/h2&gt;
 
 &lt;p&gt;So, after making up my mind to start blogging, I was particularly inclined 
-towards &lt;strong&gt;Jekyll&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;a blog-aware static site generator&lt;/code&gt;. Installing it on linux wasnt a problem and had many guides and tutorials to
+towards &lt;strong&gt;Jekyll&lt;/strong&gt;, &lt;code&gt;a blog-aware static site generator&lt;/code&gt;. Installing it on linux wasnt a problem and had many guides and tutorials to
 getting it installed by&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Installing Ruby&lt;/li&gt;
   &lt;li&gt;Installing NodeJS&lt;/li&gt;
-  &lt;li&gt;Finally, installing Jekyll using the &lt;code class=&quot;highlighter-rouge&quot;&gt;gem&lt;/code&gt; command.&lt;/li&gt;
+  &lt;li&gt;Finally, installing Jekyll using the &lt;code&gt;gem&lt;/code&gt; command.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Easy, but my problem was to install it on Windows as I do have to regularly
 switch to Windows for tasks I find easier there(MATLAB, LabView, tinkering with software only available in Windows, etc). I could 
 again go the same course of installing everything on Windows too but that would be cumbersome(and repetetive too, not cool!).&lt;/p&gt;
 
-&lt;p&gt;After exploring various options I had, I chose to download &lt;code class=&quot;highlighter-rouge&quot;&gt;portable Jekyll for Windows&lt;/code&gt;. Just clone this repo and we’re good to go! That’s it!
+&lt;p&gt;After exploring various options I had, I chose to download &lt;code&gt;portable Jekyll for Windows&lt;/code&gt;. Just clone this repo and we’re good to go! That’s it!
 But this method did have its flaws with its incremental generation. Whats that? It is a feature using which Jekyll
 autogenerates the site, if you make any changes in your code. Otherwise, you would have to restart the Jekyll server everytime
-to view the effect of your changes.&lt;/p&gt;
+to view the effect of your changes. &lt;/p&gt;
 
-&lt;p&gt;Its really easy to get going just after getting Jekyll. Just put your posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder(folders really important ot Jekyll have _ 
+&lt;p&gt;Its really easy to get going just after getting Jekyll. Just put your posts in the &lt;code&gt;_posts&lt;/code&gt; folder(folders really important ot Jekyll have _ 
 bore their name). Only one thing to be really careful about-the naming convections for your posts.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;yyyy-dd-mm-the-name-of-post.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yyyy-dd-mm-the-name-of-post.md&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;After doing this, just write your posts in Markdown in this file. To finally view your post, navigate to the root of your site folder and
-run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; add &lt;code class=&quot;highlighter-rouge&quot;&gt;--incremental&lt;/code&gt; flag to get auto-regeneration. Now, just visit, &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt; (see this in your terminal) in your browser to see your site up and running!&lt;/p&gt;
+run &lt;code&gt;jekyll serve&lt;/code&gt; add &lt;code&gt;--incremental&lt;/code&gt; flag to get auto-regeneration. Now, just visit, &lt;code&gt;localhost:4000&lt;/code&gt; (see this in your terminal) in your browser to see your site up and running!&lt;/p&gt;
 
-&lt;p&gt;So, finally its started. I’ll be blogging about everything that I will find was difficult to get through in the electrnics domain. &lt;code class=&quot;highlighter-rouge&quot;&gt;**Onto, the grand Line!**&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;So, finally its started. I’ll be blogging about everything that I will find was difficult to get through in the electrnics domain. &lt;code&gt;**Onto, the grand Line!**&lt;/code&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 12 Feb 2014 15:31:48 +0530</pubDate>
-        <link>http://localhost:4000/jekyll/update/2014/02/12/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2014/02/12/welcome-to-jekyll.html</guid>
+        <link>http://shivangg.github.io/jekyll/update/2014/02/12/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://shivangg.github.io/jekyll/update/2014/02/12/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
