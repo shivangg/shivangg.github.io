@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shivangg's Blog</title>
-    <description>Hi, I am Shivangg Tripathi, an electronic tinkerer and enthusiast, studying Electronics and Electrical engineering. My aim for writing this blog is to share what I discovered while learning about electronics and automation in general.
-</description>
-    <link>http://shivangg.github.io/</link>
-    <atom:link href="http://shivangg.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Feb 2017 04:32:48 +0530</pubDate>
-    <lastBuildDate>Sun, 19 Feb 2017 04:32:48 +0530</lastBuildDate>
+    <title></title>
+    <description></description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 20 Feb 2017 11:18:38 +0530</pubDate>
+    <lastBuildDate>Mon, 20 Feb 2017 11:18:38 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Intuitive Gesture Recognition</title>
+        <description>&lt;h2 id=&quot;get-intuitiveand-highly-configurable-gestures-for-ubuntu-1404&quot;&gt;Get Intuitive(and Highly configurable) gestures for Ubuntu 14.04&lt;/h2&gt;
+
+&lt;p&gt;Touchegg turned out to be a great little tool for configuring custom gestures for the Ubuntu 14.04. Powerful gesture recognition with up to 5 finger taps, up to 4 finger rotations and 3 fingers pinches(as long as your touchpad allows). Make your gesture recognition mimic MacBook or make it even better than that; &lt;em&gt;choice is yours&lt;/em&gt; .  Quick search took me to an article where the author suggested to change the source of &lt;code&gt;unity&lt;/code&gt; and recompile it to disable the default gesture recognition of Unity. Followed the instruction and away went my cursor :(&lt;/p&gt;
+
+&lt;p&gt;After 2 sleepless nights, I decided to made a clean install, this time hoping to not make any foolish mistake. Someone suggested that Touchegg was working out-of-the-box without touching Unity. This was safe(quite) so I gave it a try. Simply ran,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;sudo apt-get install touchegg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and made a configuration file at &lt;code&gt;~/.config/touchegg/touchegg.conf&lt;/code&gt;. This is the magic file to hold all my intuitive gestures.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
+&amp;lt;touchégg&amp;gt;
+    &amp;lt;settings&amp;gt;
+            &amp;lt;property name=&quot;composed_gestures_time&quot;&amp;gt;706&amp;lt;/property&amp;gt;
+    &amp;lt;/settings&amp;gt;
+    &amp;lt;application name=&quot;All&quot;&amp;gt;
+            &amp;lt;gesture type=&quot;DRAG&quot; fingers=&quot;3&quot; direction=&quot;RIGHT&quot;&amp;gt;
+                    &amp;lt;action type=&quot;SEND_KEYS&quot;&amp;gt;Control+Alt+Right&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+            &amp;lt;gesture type=&quot;DRAG&quot; fingers=&quot;3&quot; direction=&quot;LEFT&quot;&amp;gt;
+                    &amp;lt;action type=&quot;SEND_KEYS&quot;&amp;gt;Control+Alt+Left&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+            &amp;lt;gesture type=&quot;DRAG&quot; fingers=&quot;3&quot; direction=&quot;UP&quot;&amp;gt;
+                    &amp;lt;action type=&quot;MAXIMIZE_RESTORE_WINDOW&quot;&amp;gt;&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+            &amp;lt;gesture type=&quot;PINCH&quot; fingers=&quot;2&quot; direction=&quot;IN&quot;&amp;gt;
+                    &amp;lt;action type=&quot;SEND_KEYS&quot;&amp;gt;Control+minus&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+            &amp;lt;gesture type=&quot;PINCH&quot; fingers=&quot;2&quot; direction=&quot;OUT&quot;&amp;gt;
+                    &amp;lt;action type=&quot;SEND_KEYS&quot;&amp;gt;Control+equal&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+            &amp;lt;gesture type=&quot;DRAG&quot; fingers=&quot;4&quot; direction=&quot;DOWN&quot;&amp;gt;
+                    &amp;lt;action type=&quot;SEND_KEYS&quot;&amp;gt;Super+s&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+            &amp;lt;gesture type=&quot;DRAG&quot; fingers=&quot;4&quot; direction=&quot;UP&quot;&amp;gt;
+                    &amp;lt;action type=&quot;SEND_KEYS&quot;&amp;gt;Super+w&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+            &amp;lt;gesture type=&quot;DRAG&quot; fingers=&quot;3&quot; direction=&quot;DOWN&quot;&amp;gt;
+                    &amp;lt;action type=&quot;MINIMIZE_WINDOW&quot;&amp;gt;&amp;lt;/action&amp;gt;
+            &amp;lt;/gesture&amp;gt;
+    &amp;lt;/application&amp;gt;
+&amp;lt;/touchégg&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The text in the file is self-explanatory if stressed. For eg: &lt;code&gt;SEND_KEYS&lt;/code&gt; is used to trigger a key combination when a particular gesture is made.&lt;/p&gt;
+
+&lt;p&gt;To start touchegg as soon as the machine is turned on, make a file at path &lt;code&gt;~/.config/autostart/touchegg.desktop&lt;/code&gt; and add this to it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Desktop Entry]
+Version=0.1
+Name=Touchegg
+GenericName=Touchégg
+Comment=Touchégg Gestures Manager
+Exec=/usr/bin/touchegg %u
+Terminal=false
+Type=Application
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Later, I installed &lt;code&gt;Touchegg-GCE&lt;/code&gt; for easy configuring of the &lt;code&gt;touchegg.conf&lt;/code&gt; file.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Feb 2017 00:00:00 +0530</pubDate>
+        <link>/2017/02/05/gestureRecog.html</link>
+        <guid isPermaLink="true">/2017/02/05/gestureRecog.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>To easily set up ML python libraries</title>
@@ -29,8 +100,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 00:00:00 +0530</pubDate>
-        <link>http://shivangg.github.io/2017/01/01/pyML-lib.html</link>
-        <guid isPermaLink="true">http://shivangg.github.io/2017/01/01/pyML-lib.html</guid>
+        <link>/2017/01/01/pyML-lib.html</link>
+        <guid isPermaLink="true">/2017/01/01/pyML-lib.html</guid>
         
         
       </item>
@@ -96,8 +167,8 @@ stepping mode yourself; just pass the information to the translator about which 
 
 </description>
         <pubDate>Sat, 26 Dec 2015 00:00:00 +0530</pubDate>
-        <link>http://shivangg.github.io/2015/12/26/stepper-motor.html</link>
-        <guid isPermaLink="true">http://shivangg.github.io/2015/12/26/stepper-motor.html</guid>
+        <link>/2015/12/26/stepper-motor.html</link>
+        <guid isPermaLink="true">/2015/12/26/stepper-motor.html</guid>
         
         
       </item>
@@ -112,8 +183,8 @@ stepping mode yourself; just pass the information to the translator about which 
 
 </description>
         <pubDate>Sun, 12 Apr 2015 00:00:00 +0530</pubDate>
-        <link>http://shivangg.github.io/2015/04/12/my-ethos.html</link>
-        <guid isPermaLink="true">http://shivangg.github.io/2015/04/12/my-ethos.html</guid>
+        <link>/2015/04/12/my-ethos.html</link>
+        <guid isPermaLink="true">/2015/04/12/my-ethos.html</guid>
         
         
       </item>
@@ -153,8 +224,8 @@ run &lt;code&gt;jekyll serve&lt;/code&gt; add &lt;code&gt;--incremental&lt;/code
 
 </description>
         <pubDate>Wed, 12 Feb 2014 15:31:48 +0530</pubDate>
-        <link>http://shivangg.github.io/jekyll/update/2014/02/12/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://shivangg.github.io/jekyll/update/2014/02/12/welcome-to-jekyll.html</guid>
+        <link>/jekyll/update/2014/02/12/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">/jekyll/update/2014/02/12/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
