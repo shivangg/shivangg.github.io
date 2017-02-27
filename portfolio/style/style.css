@@ -4,6 +4,18 @@ body{
     line-height: 1.8;
 }
 
+
+.panel{
+    border: 1px solid #1abc9c; 
+    border-radius:0;
+    transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+    box-shadow: 5px 0 40px rgba(0,0,0, .2);
+}
+
+
 p{
 	font-size: 16px;
 }
