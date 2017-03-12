@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mario
-<!-- permalink: /about/ -->
+permalink: /mario/
 ---
 
 ![my image]({{ site.baseurl }}/images/dp.jpg)
