@@ -22,6 +22,11 @@ url: "http://shivangg.github.com" # the base hostname & protocol for your site
 twitter_username: xshivangx
 github_username:  shivangg
 
+# adding the support for github flavoured emojis
+gems:
+  - jemoji
+  
+
 # Build settings
 markdown: kramdown
 
