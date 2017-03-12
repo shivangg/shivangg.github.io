@@ -4,6 +4,10 @@ body{
     line-height: 1.8;
 }
 
+.bold {
+    font-weight: 900;
+}
+
 
 .panel{
     border: 1px solid #1abc9c; 
@@ -81,6 +85,14 @@ p{
 .btn{
 	padding-top: 10px;
 }
+
+#what p{
+    font-size: large;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
 
 .bg-1{
 	background-color: #1abc9c;
