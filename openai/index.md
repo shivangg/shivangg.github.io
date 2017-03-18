@@ -6,7 +6,7 @@ permalink: /openai/
 
 ## Reinforcement Learning using OpenAI Gym
 
-OpenAI gym was founded/invested by Elon Musk in order to open source the AI for everyone and also make it safe.
+OpenAI gym was founded/invested by Elon Musk and Sam Altman in order to open source the AI for everyone and also make it safe.
     
 
 ## Technical Concepts

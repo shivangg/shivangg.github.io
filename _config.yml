@@ -27,6 +27,6 @@ gems:
   
 
 # Build settings
-# markdown: kramdown
+markdown: kramdown
 
-# theme: jekyll-theme-minimal
+theme: jekyll-theme-minimal
