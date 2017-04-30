@@ -315,6 +315,9 @@ pre {
       .post-content h4 {
         font-size: 18px; } }
 
+.row {
+  margin: 0px !important; }
+
 /**
  * Syntax highlighting styles
  */
