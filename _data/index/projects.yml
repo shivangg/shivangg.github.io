@@ -8,10 +8,10 @@
   img: /static/assets/img/landing/copybot.jpg
   desc: CopyBot provides an intuitive interface to control any robotic arm without the need of any prior programming experience.
 
-- name: IronMan
+- name: Iron Man Tribute
   i18n: ironman
   gh_user: shivangg
-  repo: ironman
+  repo: ironTribute
   img: /static/assets/img/landing/ironman.jpg
   desc: A simple static page to pay tribute to my inspiration, the legendary engineer of the Marvel universe.
 
