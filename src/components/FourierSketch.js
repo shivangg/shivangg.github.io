@@ -23,54 +23,69 @@ const p5Seed = sketch => {
   let patternPath = [];
   let fourierX;
   let data = [];
-
+  let font;
   const green = '#00eb00';
   const blue = '#3163ff';
   const sublimeTextCobalt2ThemeColor = '#1d354d';
   // const yellow = '#fbe200';
 
   sketch.preload = () => {
-    const fillData = fonts => {
-      const drawing = fonts.textToPoints('shivangg', 0, 0, 250, {
-        sampleFactor: 1,
-        simplifyThreshold: 0
-      });
-      data = {
-        drawing: drawing
-      };
-      console.log('font loaded');
-    };
-    sketch.loadFont(customFont, fillData);
+    font = sketch.loadFont(customFont);
   };
 
-  const normalizeDataPoints = (
-    x,
-    y,
-    initialX,
-    initialY,
-    recordedScreenWidth
-  ) => {
-    const normalizedX =
-      (window.innerWidth * (x - initialX + 200)) / recordedScreenWidth;
-    const normalizedY =
-      (window.innerWidth * (y - initialY - 60)) / recordedScreenWidth;
+  const fillData = fonts => {
+    function findCorrectedValuesFromScreenSize() {
+      let referenceSize = -300;
+      let fontSize = 200;
+      if (window.innerWidth < 800) {
+        referenceSize = 40;
+        fontSize = 60;
+      }
+      return [referenceSize, fontSize];
+    }
+
+    let [referenceSize, fontSize] = findCorrectedValuesFromScreenSize();
+    const drawing = fonts.textToPoints('shivangg', referenceSize, 0, fontSize, {
+      sampleFactor: 2,
+      simplifyThreshold: 0
+    });
+    data = {
+      drawing: drawing
+    };
+    console.log('font loaded');
+    console.log('window.innerWidth', window.innerWidth);
+  };
+
+  const normalizeDataPoints = (x, y) => {
+    const normalizedX = x;
+    // (window.innerWidth * (x - initialX + 200)) / recordedScreenWidth;
+    const normalizedY = y;
+    // (window.innerWidth * (y - initialY - 60)) / recordedScreenWidth;
 
     return [normalizedX, normalizedY];
   };
 
   sketch.setup = () => {
+    sketch.createCanvas(window.innerWidth, window.innerHeight / 2);
+    // sketch.translate(0, 100);
+    fillData(font);
     console.log('starting setup...');
     const complexNumbers = [];
-    const { x: fisrtX, y: firstY } = data.drawing[0];
+    // const { x: fisrtX, y: firstY } = data.drawing[0];
+    // console.log('first x, y', fisrtX, firstY);
 
-    sketch.createCanvas(window.innerWidth, window.innerHeight / 2);
+    let minX = 10000000;
 
     for (const { x, y } of data.drawing) {
+      if (x < minX) {
+        minX = x;
+      }
       const xyInComplexPlaneWithCorrectedOrigins = new Complex(
-        ...normalizeDataPoints(x, y, fisrtX, firstY, 1100)
+        ...normalizeDataPoints(x, y)
       );
       complexNumbers.push(xyInComplexPlaneWithCorrectedOrigins);
     }
+    console.log('minX: ', minX);
     fourierX = dft(complexNumbers);
     fourierX.sort((a, b) => b.amplitude - a.amplitude);
 
@@ -139,9 +154,10 @@ const p5Seed = sketch => {
         sketch.noFill();
         // console.log(patternPath.length);
         for (const { x, y } of patternPath) {
-          if (distanceBetween(prevPointX, prevPointY, x, y) < 500) {
+          if (distanceBetween(prevPointX, prevPointY, x, y) < 100) {
             sketch.stroke(green);
             sketch.vertex(x, y);
+            // sketch.vertex(x, y);
           } else {
             // sketch.stroke(51, 0);
             (function endLastLetterAndStartNew() {
@@ -197,7 +213,7 @@ const p5Seed = sketch => {
         phase
       };
     }
-    console.log('dft computed!', X);
+    console.log('dft computed!', X.length);
     return X;
   };
 
@@ -232,16 +248,9 @@ const p5Seed = sketch => {
       }
       // sketch.redraw();
 
-      (function drawCircles() {
-        sketch.stroke('#2ef');
-        sketch.noFill();
-        sketch.ellipse(prevx, prevy, radius * 2);
-      })();
+      drawCircles(sketch, prevx, prevy, radius);
 
-      (function drawRadiusLine() {
-        sketch.stroke(blue);
-        sketch.line(prevx, prevy, x, y);
-      })();
+      drawRadiusLine(sketch, prevx, prevy, x, y, blue);
 
       if (circleUptoWhichRender === i) {
         // console.log(circleUptoWhichRender, fourierX.length);
@@ -253,11 +262,15 @@ const p5Seed = sketch => {
   };
 };
 
-// class CircleDrawer extends Component {
-//   render() {
-//     const canvasPlaygroundForP5 = new p5(p5Seed, 'p5Container');
-//     return { canvasPlaygroundForP5 };
-//   }
-// }
+const drawCircles = (sketch, prevx, prevy, radius) => {
+  sketch.stroke('#2ef');
+  sketch.noFill();
+  sketch.ellipse(prevx, prevy, radius * 2);
+};
+
+const drawRadiusLine = (sketch, prevx, prevy, x, y, color) => {
+  sketch.stroke(color);
+  sketch.line(prevx, prevy, x, y);
+};
 
 export default p5Seed;
