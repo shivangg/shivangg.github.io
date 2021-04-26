@@ -16,10 +16,10 @@ const Home = () => {
         src="/assets/shivang-dark.png"
       />
 
-      <h1 className={styles.name}>Hi! I&apos;m Shivang.</h1>
-      <h2 className={styles.occupation}>
+      <p className={styles.name}>Hi! I&apos;m Shivang.</p>
+      <p className={styles.occupation}>
         Frontend Developer <br /> JavaScript Engineer
-      </h2>
+      </p>
 
       <div className={styles.skills}>
         <Skills />
