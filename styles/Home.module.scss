@@ -1,0 +1,24 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shivangImage {
+  width: 50vw;
+}
+
+.name {
+  font-size: 60px;
+  }
+
+.occupation {
+  font-weight: 200;
+}
+
+.skills {
+  margin-top: 155px;
+}
