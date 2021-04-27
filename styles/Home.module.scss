@@ -1,27 +1,49 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
+.aboveTheFold {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 90vh;
+  height: -webkit-fill-available;
+  max-width: 500px;
+  width: 90vw;
+}
+
 .shivangImage {
-  width: 50vw;
+  position: relative;
+  right: 5px;
+  height: 50vh;
+  aspect-ratio: 0.61;
 }
 
 .name {
-  font-size: 60px;
-  text-align: center;
-  }
-
-.occupation {
-  font-size: 20px;
+  font-size: 200%;
   font-weight: 200;
   text-align: center;
+
+  span {
+    font-size: 80%;
+    padding-right: 1rem;
+  }
+}
+
+.occupation {
+  font-size: 200%;
+  text-align: center;
+  margin-top: 20%;
+
+  p {
+    margin: 0;
+  }
 }
 
 .skills {
-  margin-top: 155px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
