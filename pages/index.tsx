@@ -2,7 +2,10 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import Skills from './Skills';
 
+console.log('logging from outside Home component');
+
 const Home = () => {
+  console.log('logging from Home component');
   return (
     <div className={styles.container}>
       <Head>
