@@ -14,6 +14,8 @@ const Home = () => {
           className={styles.shivangImage}
           alt="illustration of Shivang"
           src="/assets/shivang-dark.png"
+          height={410}
+          width={252}
         />
 
         <p className={styles.name}>
