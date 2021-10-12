@@ -13,7 +13,7 @@ const Home = () => {
         <img
           className={styles.shivangImage}
           alt="illustration of Shivang"
-          src="/assets/shivang-dark.png"
+          src="/assets/shivang-dark.webp"
           height={410}
           width={252}
         />

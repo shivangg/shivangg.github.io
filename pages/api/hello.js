@@ -4,7 +4,7 @@ import { withSentry } from '@sentry/nextjs';
 
 const handler = (req, res) => {
   console.log("I'm sending in john Doe!")
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json({ name: 'Shivang' })
 }
 
 export default withSentry(handler);
