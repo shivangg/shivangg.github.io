@@ -4,6 +4,29 @@
   align-items: center;
 }
 
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }  
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.handEmoji {
+  font-size: 80%;
+  padding-right: 1rem;
+
+  animation-name: wave-animation;
+  animation-delay: 2s;
+  animation-duration: 2.5s;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  margin-left: 3px;
+}
+
 .aboveTheFold {
   display: flex;
   flex-direction: column;
@@ -26,11 +49,6 @@
   font-size: 200%;
   font-weight: 200;
   text-align: center;
-
-  span {
-    font-size: 80%;
-    padding-right: 1rem;
-  }
 }
 
 .occupation {

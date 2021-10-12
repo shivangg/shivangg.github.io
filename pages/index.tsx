@@ -21,9 +21,9 @@ const Home = () => {
 
         <p className={styles.name}>
           Hi
-          <span role="img" aria-label="wave hand">
+          <span className={styles.handEmoji} role="img" aria-label="wave hand">
             👋
-          </span>
+          </span>{' '}
           I&apos;m Shivang.
         </p>
 
